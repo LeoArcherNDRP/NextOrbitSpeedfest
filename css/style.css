@@ -266,18 +266,14 @@ html::before {
 }
 
 .hero-cta button {
-  padding: 10px 20px !important;   /* smaller */
-  font-size: 0.85rem !important;   /* slightly smaller text */
-  min-width: 150px !important;     /* reduced width */
+  padding: 8px 18px !important;   /* smaller */
+  font-size: 0.8rem !important;   /* slightly smaller text */
+  min-width: 140px !important;     /* reduced width */
   white-space: nowrap;             /* prevents wrapping */
 }
 
 .hero-cta a {
   display: inline-flex;
-}
-
-.hero-cta button {
-  white-space: nowrap;
 }
 
 /* ========================================================================  
