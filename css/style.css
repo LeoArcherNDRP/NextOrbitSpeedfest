@@ -265,6 +265,19 @@ html::before {
   opacity: 0.9;
 }
 
+.hero-cta {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: nowrap; /* stops stacking */
+}
+
+.hero-cta a {
+  display: inline-flex;
+}
+
 /* ========================================================================  
    BUTTONS  
    ======================================================================== */
