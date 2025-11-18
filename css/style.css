@@ -265,17 +265,19 @@ html::before {
   opacity: 0.9;
 }
 
-.hero-cta {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 16px;
-  flex-wrap: nowrap; /* stops stacking */
+.hero-cta button {
+  padding: 10px 20px !important;   /* smaller */
+  font-size: 0.85rem !important;   /* slightly smaller text */
+  min-width: 150px !important;     /* reduced width */
+  white-space: nowrap;             /* prevents wrapping */
 }
 
 .hero-cta a {
   display: inline-flex;
+}
+
+.hero-cta button {
+  white-space: nowrap;
 }
 
 /* ========================================================================  
