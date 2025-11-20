@@ -112,32 +112,13 @@ document.addEventListener("click", (e) => {
 });
 
 /* ==========================================================
-   HOME PAGE FADE CAROUSEL
-========================================================== */
-const homeCarousel = document.querySelector("[data-home-fade-carousel]");
-
-if (homeCarousel) {
-  const slides = homeCarousel.querySelectorAll(".home-fade-slide");
-  let index = 0;
-
-  slides[0].classList.add("active");
-
-  function nextSlide() {
-    slides[index].classList.remove("active");
-    index = (index + 1) % slides.length;
-    slides[index].classList.add("active");
-  }
-
-  setInterval(nextSlide, 4500);
-}
-
-/* ==========================================================
-   UNIVERSAL EVENT PAGE FADE CAROUSELS
+   MULTIPLE FADE CAROUSELS (independent)
 ========================================================== */
 document.querySelectorAll("[data-event-fade-carousel]").forEach(carousel => {
   const slides = carousel.querySelectorAll(".event-fade-slide");
   let index = 0;
 
+  // Ensure first slide is active
   slides[0].classList.add("active");
 
   setInterval(() => {
