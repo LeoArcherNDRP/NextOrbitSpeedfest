@@ -621,3 +621,98 @@ body.page-transition.page-visible {
 * {
   -webkit-tap-highlight-color: transparent;
 }
+
+/* ========================================================================
+   CHAMPIONSHIP LAYOUT — RESPONSIVE PANEL WIDTH CONTROL
+   ======================================================================== */
+
+/* Standings panel (full width normal behavior) */
+.standings-panel {
+  max-width: 960px;
+  margin: 0 auto 40px;
+  padding: 40px 28px;
+}
+
+/* Race Results — make much narrower on desktop */
+.race-list-panel {
+  max-width: 420px;     /* smaller than before */
+  width: 55%;           /* about half width of the page */
+  margin: 40px auto 80px;
+  padding: 32px 24px;
+  text-align: center;
+}
+
+/* Race list spacing/links */
+.race-list a {
+  padding: 12px 0;
+  margin-bottom: 14px;
+  border-radius: 14px;
+}
+
+/* -------------------------------
+   MOBILE BEHAVIOR (Under 600px)
+   ------------------------------- */
+@media (max-width: 600px) {
+
+  /* Standings panel stays very wide on mobile */
+  .standings-panel {
+    max-width: 94%;
+    padding: 28px 20px;
+  }
+
+  /* Race Results should be ~66% of screen */
+  .race-list-panel {
+    max-width: 66vw;     /* 2/3 of screen width */
+    width: 66%;
+    padding: 26px 18px;
+  }
+}
+
+@media (max-width: 600px) {
+
+  /* Force team column to be narrower */
+  .standings-table td:nth-child(4),
+  .standings-table th:nth-child(4) {
+    width: 28%;
+    word-break: break-word;
+    white-space: normal;
+    text-align: center;
+  }
+
+  /* Shrink driver column a bit too */
+  .standings-table td:nth-child(2),
+  .standings-table th:nth-child(2) {
+    width: 28%;
+  }
+
+  /* Allow POS / POINTS to stay neat */
+  .standings-table td:nth-child(1),
+  .standings-table th:nth-child(1),
+  .standings-table td:nth-child(3),
+  .standings-table th:nth-child(3) {
+    width: 22%;
+  }
+}
+
+/* ================================================================
+   INDIVIDUAL RACE PAGE PANEL (Restored — separate from championship)
+   ================================================================ */
+
+.race-standings-panel {
+  max-width: 960px;
+  margin: 0 auto 50px;
+  padding: 40px 28px;
+  border-radius: 22px;
+
+  background: radial-gradient(circle, rgba(10,20,40,0.95), rgba(2,4,12,0.98));
+  border: 1px solid rgba(255,255,255,0.25);
+  box-shadow:
+    0 16px 40px rgba(0,0,0,0.95),
+    0 0 22px rgba(0,200,255,0.75);
+}
+
+/* Makes the table behave consistently */
+.race-standings-panel table {
+  width: 100%;
+  border-collapse: collapse;
+}
